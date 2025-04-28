@@ -12,21 +12,19 @@ html {
 }
 
 .top {
-    background-color: #ffffff;
-    color: #0a1f44;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     padding: 80px 10%;
-    display: block;
     box-sizing: border-box;
-    font-size: 1.5rem;
-    font-weight: normal;
     background-image: url('../images/top1.jpg');
-    position: relative;
-    height: 500px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: white;
+    position: relative;
 }
 
 .top::after {
