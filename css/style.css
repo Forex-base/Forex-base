@@ -12,19 +12,23 @@ html {
 }
 
 .top {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    background-color: #ffffff;
+    color: #0a1f44;
+    width: 100%;
     min-height: 100vh;
     padding: 80px 10%;
+    display: flex; /* <-- changed from block to flex */
+    flex-direction: column; /* <-- added */
+    justify-content: center; /* <-- added */
+    align-items: center; /* <-- added */
     box-sizing: border-box;
+    font-size: 1.5rem;
+    font-weight: normal;
     background-image: url('../images/top1.jpg');
+    position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    position: relative;
 }
 
 .top::after {
