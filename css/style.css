@@ -1,32 +1,37 @@
 body {
-      margin: 0;
-}
-
-h1{
     margin: 0;
 }
+
+h1 {
+    margin: 0;
+}
+
+/* Set root font-size for better scaling */
+html {
+    font-size: 16px;
+}
+
 .top {
     background-color: #ffffff;
     color: #0a1f44;
     width: 100%;
     min-height: 100vh;
     padding: 80px 10%;
-    display: flex; /* <-- changed from block to flex */
-    flex-direction: column; /* <-- added */
-    justify-content: center; /* <-- added */
-    align-items: center; /* <-- added */
+    display: block;
     box-sizing: border-box;
     font-size: 1.5rem;
     font-weight: normal;
     background-image: url('../images/top1.jpg');
     position: relative;
+    height: 500px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-.top::after{
+
+.top::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -34,6 +39,7 @@ h1{
     background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
+
 .top > * {
     position: relative;
     z-index: 2;
@@ -41,7 +47,7 @@ h1{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.top2{
+.top2 {
     width: 100%;
     min-height: 70vh;
     display: block;
@@ -57,9 +63,9 @@ h1{
     background-repeat: no-repeat;
 }
 
-.top2::after{
+.top2::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -67,6 +73,7 @@ h1{
     background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
+
 .top2 > * {
     position: relative;
     z-index: 2;
@@ -74,7 +81,7 @@ h1{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.top3{
+.top3 {
     width: 100%;
     min-height: 80vh;
     display: block;
@@ -90,9 +97,9 @@ h1{
     background-repeat: no-repeat;
 }
 
-.top3::after{
+.top3::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -100,6 +107,7 @@ h1{
     background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
+
 .top3 > * {
     position: relative;
     z-index: 2;
@@ -107,10 +115,10 @@ h1{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-.top4{
+.top4 {
     width: 100%;
     min-height: 50vh;
-    display: normal;
+    display: block; /* fixed your mistake: was "normal" before */
     padding: 80px 10%;
     box-sizing: border-box;
     font-size: 1.5rem;
@@ -123,9 +131,9 @@ h1{
     background-repeat: no-repeat;
 }
 
-.top4::after{
+.top4::after {
     content: "";
-    position:absolute;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -133,6 +141,7 @@ h1{
     background: rgba(0, 0, 0, 0);
     z-index: 1;
 }
+
 .top4 > * {
     position: relative;
     z-index: 2;
@@ -140,19 +149,32 @@ h1{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     table, tbody, tr {
-    display: block;
-    width: 100%;
+        display: block;
+        width: 100%;
     }
     td {
-      display: block;
-      width: 100%;
-      text-align: center;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0; /* Added small padding for breathing space */
     }
     img {
         max-width: 80%;
         height: auto;
     }
+    .top, .top2, .top3, .top4 {
+        padding: 40px 5%; /* Reduced padding for smaller screens */
+        font-size: 1.2rem; /* Reduced font size slightly on mobile */
     }
+}
+
+/* (Optional extra mobile tweak for very small phones) */
+@media (max-width: 480px) {
+    img {
+        max-width: 70%;
+    }
+}
 
