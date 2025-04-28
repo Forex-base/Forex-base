@@ -11,13 +11,15 @@ h1{
     width: 100%;
     min-height: 100vh;
     padding: 80px 10%;
-    display: block;
+    display: flex; /* <-- changed from block to flex */
+    flex-direction: column; /* <-- added */
+    justify-content: center; /* <-- added */
+    align-items: center; /* <-- added */
     box-sizing: border-box;
     font-size: 1.5rem;
     font-weight: normal;
     background-image: url('../images/top1.jpg');
     position: relative;
-    height: 500px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
