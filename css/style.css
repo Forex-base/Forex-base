@@ -142,29 +142,17 @@ h1{
 
 @media (max-width: 768px) {
     table, tbody, tr {
-        display: block;
-        width: 100%;
+    display: block;
+    width: 100%;
     }
     td {
-        display: block;
-        width: 100%;
-        text-align: center;
+      display: block;
+      width: 100%;
+      text-align: center;
     }
     img {
         max-width: 80%;
         height: auto;
     }
-
-    /* NEW (fixed) */
-    .top, .top4 {
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
     }
 
-    .top2, .top3 {
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
