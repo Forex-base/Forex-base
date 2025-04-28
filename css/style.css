@@ -4,20 +4,23 @@ body {
 
 h1{
     margin: 0;
-}
-.top{
+}.top {
     background-color: #ffffff;
     color: #0a1f44;
     width: 100%;
     min-height: 100vh;
     padding: 80px 10%;
-    display: block;
+    display: flex; /* <<< changed */
+    flex-direction: column; /* <<< added */
+    justify-content: center; /* <<< added */
+    align-items: center; /* <<< added */
+    flex-wrap: wrap; /* <<< added */
     box-sizing: border-box;
     font-size: 1.5rem;
     font-weight: normal;
     background-image: url('../images/top1.jpg');
     position: relative;
-    min-height: 500px; /* <<< changed this */
+    height: auto; /* <<< changed */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,6 +154,15 @@ h1{
     img {
         max-width: 80%;
         height: auto;
+    }
+    .top table {
+    width: 100%;
+    }
+
+    .top td {
+    display: inline-block;
+    width: auto;
+    text-align: center;
     }
     }
 
