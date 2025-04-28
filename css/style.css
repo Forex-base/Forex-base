@@ -155,10 +155,16 @@ h1{
         height: auto;
     }
 
-    /* NEW code starts here */
-    .top, .top2, .top3, .top4 {
-        background-size: contain; /* instead of cover on small screens */
-        background-repeat: no-repeat;
+    /* NEW (fixed) */
+    .top, .top4 {
+        background-size: cover;
         background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .top2, .top3 {
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 }
