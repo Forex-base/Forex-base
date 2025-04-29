@@ -1,16 +1,20 @@
-/* Base styling */
+/* General Styling */
 body {
     margin: 0;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3, p {
+    margin: 0;
 }
 
 html {
     font-size: 16px;
 }
 
-h1, h2 {
-    margin: 0;
-    font-weight: normal;
+h1 {
+    font-size: 2rem;
 }
 
 p {
@@ -18,54 +22,47 @@ p {
 }
 
 a {
-    color: #0a1f44;
     text-decoration: none;
+    color: inherit;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Top sections */
+/* Top Section Styles */
 .top, .top2, .top3, .top4 {
     width: 100%;
     display: block;
     padding: 80px 10%;
     box-sizing: border-box;
-    position: relative;
-    overflow: hidden;
+    color: white;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative;
+    text-align: center;
 }
 
 .top {
+    background-image: url('../images/top1.jpg');
     background-color: #ffffff;
     color: #0a1f44;
-    background-image: url('../images/top1.jpg');
 }
 
 .top2 {
+    background-image: url('../images/top2.jpg');
     background-color: #f5f5f5;
     color: #0a1f44;
-    background-image: url('../images/top2.jpg');
 }
 
 .top3 {
-    background-color: #e3f2fd;
-    color: #0a1f44;
     background-image: url('../images/top3.jpg');
+    background-color: #e3f2fd;
 }
 
 .top4 {
-    background-color: #0a1f44;
-    color: #ffffff;
     background-image: url('../images/top4.jpg');
+    background-color: #0a1f44;
+    color: white;
 }
 
-/* Overlay effect */
 .top::after, .top2::after, .top3::after, .top4::after {
     content: "";
     position: absolute;
@@ -73,62 +70,97 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 1;
 }
 
 .top > *, .top2 > *, .top3 > *, .top4 > * {
     position: relative;
     z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Responsive padding and font sizing */
+/* Navigation & Footer */
+nav, footer {
+    width: 100%;
+    padding: 20px;
+    background-color: #0a1f44;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
     .top, .top2, .top3, .top4 {
         padding: 60px 5%;
         font-size: 1.2rem;
     }
+
+    .top img, .top2 img, .top3 img, .top4 img {
+        width: 80px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .top table, .top2 table, .top3 table, .top4 table {
+        width: 100%;
+    }
+
+    td, th {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 480px) {
     .top, .top2, .top3, .top4 {
-        padding: 40px 4%;
+        padding: 40px 3%;
         font-size: 1rem;
+    }
+
+    .top img, .top2 img, .top3 img, .top4 img {
+        width: 70px;
+        height: auto;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    .top table, .top2 table, .top3 table, .top4 table {
+        width: 100%;
+    }
+
+    .top td, .top2 td, .top3 td, .top4 td {
+        display: block;
+        width: 100%;
+        padding: 10px;
     }
 }
 
 @media (max-width: 375px) {
     .top, .top2, .top3, .top4 {
-        padding: 30px 3%;
+        padding: 30px 2%;
         font-size: 0.95rem;
     }
-    .top table, .top2 table, .top3 table, .top4 table {
-        width: 100%;
-        display: block;
-    }
-    .top tr, .top2 tr, .top3 tr, .top4 tr {
-        display: block;
-        width: 100%;
-    }
-    .top td, .top2 td, .top3 td, .top4 td {
-        display: block;
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-    }
-    .top img, .top2 img, .top3 img, .top4 img {
-        max-width: 80px;
-    }
-    .top h1, .top2 h1, .top3 h1, .top4 h1 {
-        font-size: 1rem;
-    }
-}
 
-/* Larger screens */
-@media (max-width: 1024px) {
-    .top, .top2, .top3, .top4 {
-        padding: 80px 6%;
-        font-size: 1.4rem;
+    .top h1, .top2 h1, .top3 h1, .top4 h1 {
+        font-size: 1.2rem;
+    }
+
+    .top img, .top2 img, .top3 img, .top4 img {
+        width: 60px;
+        height: auto;
     }
 }
 
@@ -137,115 +169,12 @@ a:hover {
         padding: 100px 12%;
         font-size: 1.6rem;
     }
+
     .top h1, .top2 h1, .top3 h1, .top4 h1 {
         font-size: 2rem;
     }
+
     .top img, .top2 img, .top3 img, .top4 img {
         max-width: 100px;
     }
-}
-
-/* Registration page */
-form {
-    background-color: #f5f5f5;
-    padding: 30px;
-    max-width: 500px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-input[type="text"], input[type="password"], input[type="email"] {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-input[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #0a1f44;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #0053a0;
-}
-
-/* Contact Us page */
-.contact-form {
-    background-color: #f5f5f5;
-    padding: 30px;
-    max-width: 500px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #0a1f44;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0053a0;
-}
-
-/* Career Plan page */
-.career-plan {
-    background-color: #f5f5f5;
-    padding: 30px;
-    max-width: 800px;
-    margin: 30px auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.career-plan h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.career-plan ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.career-plan li {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-}
-
-.career-plan a {
-    color: #0a1f44;
-    font-size: 1rem;
-    text-decoration: none;
-}
-
-.career-plan a:hover {
-    text-decoration: underline;
 }
