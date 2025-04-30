@@ -15,13 +15,20 @@ html {
 
 .header {
   display: flex;
-  align-items: center; /* Aligns image and text vertically */
-  gap: 20px;            /* Adds space between image and text */
+  align-items: stretch; /* Make both image and text match height */
+  gap: 20px;
 }
 
 .logo-header {
-  width: 100px;         /* Adjust this size as needed */
+  width: 150px;     /* Or any fixed size */
   height: auto;
+  object-fit: contain;
+}
+
+.header-text {
+  margin: 0;
+  display: flex;
+  align-items: center;   /* Vertically centers the text within its full height */
 }
 h1 {
     font-size: 2rem;
