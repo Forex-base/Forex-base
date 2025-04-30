@@ -175,3 +175,40 @@ nav, footer {
         max-width: 100px;
     }
 }
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Ensures responsiveness on small screens */
+}
+
+.form-group label {
+    width: 160px; /* Fixed width keeps labels aligned */
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"],
+.form-group input[type="tel"],
+.form-group input[type="file"] {
+    flex: 1;
+    padding: 8px;
+    font-size: 1rem;
+    min-width: 0;
+}
+
+.form-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.form-group:last-child {
+    justify-content: center;
+}
