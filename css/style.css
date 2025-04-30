@@ -1,5 +1,6 @@
 /* General Styling */
-body {
+html, body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.5;
@@ -38,6 +39,8 @@ a {
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
+    min-height: 100vh;
+    height: 100%;
 }
 
 .top {
@@ -63,7 +66,13 @@ a {
     color: white;
 }
 
-.top::after, .top2::after, .top3::after, .top4::after {
+/* Remove dark overlay on top2 and top4 */
+.top2::after,
+.top4::after {
+    background: none;
+}
+
+.top::after, .top3::after {
     content: "";
     position: absolute;
     top: 0;
@@ -178,6 +187,8 @@ nav, footer {
         max-width: 100px;
     }
 }
+
+/* Form Styling */
 form {
     max-width: 600px;
     margin: 0 auto;
