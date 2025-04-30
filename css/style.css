@@ -1,6 +1,5 @@
 /* General Styling */
-html, body {
-    height: 100%;
+body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.5;
@@ -39,8 +38,6 @@ a {
     background-repeat: no-repeat;
     position: relative;
     text-align: center;
-    min-height: 100vh;
-    height: 100%;
 }
 
 .top {
@@ -66,27 +63,18 @@ a {
     color: white;
 }
 
-/* Remove dark overlay on top2 and top4 */
-.top2::after,
-.top4::after {
-    background: none;
-}
-
-.top::after, .top3::after {
+.top::after, .top2::after, .top3::after, .top4::after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 1;
 }
 
 .top > *, .top2 > *, .top3 > *, .top4 > * {
     position: relative;
     z-index: 2;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* Navigation & Footer */
@@ -186,27 +174,4 @@ nav, footer {
     .top img, .top2 img, .top3 img, .top4 img {
         max-width: 100px;
     }
-}
-
-/* Form Styling */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    width: 150px;
-    font-weight: bold;
-}
-
-.form-group input {
-    flex: 1;
-    padding: 8px;
-    font-size: 1rem;
 }
