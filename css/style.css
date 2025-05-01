@@ -338,6 +338,7 @@ p a:hover {
     color: #ffffff;
     font-size: 20px;
     padding: 5px 10px 5px 10px;
+    margin: 40px auto 60px;
     text-decoration: none;
 }
 
