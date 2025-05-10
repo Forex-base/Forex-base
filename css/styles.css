@@ -307,6 +307,8 @@ label {
 .contact-form input[type="email"],
 .registration-form input[type="email"],
 .contact-form input[type="text"],
+.registration-form input[type="username"],
+.contact-form input[type="text"],
 .registration-form input[type="text"],
 .contact-form input[type="password"],
 .registration-form input[type="password"],
