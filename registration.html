@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="top2">
+        <div class="registration-header">
+            <img class="register-image" src="images/forexbase.png" alt="Forexbase profile picture">
+            <h1>Fill the registration form and click submit</h1>
+        </div>
+
+       <form class="registration-form" action="mailto:forexbasebot@gmail.com" method="post" enctype="text/plain">
+            <div class="form-group">
+                <label for="fullname">Fullname:</label>
+                <input type="text" id="fullname" name="Fullname" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email address:</label>
+                <input type="email" id="email" name="Your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Username">Your username:</label>
+                <input type="email" id="Username" name="Your Username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="Yourpassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm password:</label>
+                <input type="password" id="confirm-password" name="Yourpassword" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-number">Phone number:</label>
+                <input type="tel" id="phone-number" name="Yournumber" required>
+            </div>
+
+            <div class="form-group">
+                <label for="id-card">ID Card for verification:</label>
+                <input type="file" id="id-card" name="YourID" required>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" name="subscribe" value="subscribe"> Subscribe to newsletter
+                </label>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+
+        <p><a class="btn" href="html.html">Home Page</a></p>
+    </div>
+</body>
+</html>
