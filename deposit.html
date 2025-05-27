@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deposit - Forexbase</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      margin: 40px 0 20px;
+    }
+
+    .wallets {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .wallet {
+      background: #1c1c1c;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #00b894;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      max-width: 300px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    .amount-input {
+      max-width: 300px;
+      margin: 0 auto 10px auto;
+      display: block;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .overview-btn {
+      display: block;
+      margin: 20px auto 0 auto;
+      max-width: 300px;
+      background: #0984e3;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 300px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h2>Deposit Cryptocurrency</h2>
+
+  <!-- Amount input centered below wallets -->
+  <input
+    type="number"
+    placeholder="Enter amount to deposit ($)"
+    class="amount-input"
+    id="deposit-amount"
+    min="1"
+  />
+  <p></p>
+
+  <div class="wallets">
+    <div class="wallet">
+      <h3>USDT (TRC20)</h3>
+      <input type="text" value="TJh6Y2peXwjoTnCx7iFAJP4cxMqCuZVjzV" id="usdt" readonly />
+      <p></p>
+      <button onclick="copyToClipboard('usdt')">Copy Address</button>
+    </div>
+    <div class="wallet">
+      <h3>Ethereum</h3>
+      <input type="text" value="0x8Be8737FE09aE1505aa6B3F09CA66a714BAFf9bD" id="eth" readonly />
+      <p></p>
+      <button onclick="copyToClipboard('eth')">Copy Address</button>
+    </div>
+    <div class="wallet">
+      <h3>Bitcoin</h3>
+      <input type="text" value="bc1qygxtwtr84c9vsgj7qfdvlmx7wpjm9g95vclsa0" id="btc" readonly />
+      <p></p>
+      <button onclick="copyToClipboard('btc')">Copy Address</button>
+    </div>
+  </div>
+
+  
+
+  <!-- Request Deposit button centered below amount -->
+  <button id="request-deposit-btn">Request Deposit</button>
+
+  <a href="overview.html" class="overview-btn">Overview</a>
+
+  <script>
+    function copyToClipboard(id) {
+      const copyText = document.getElementById(id);
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Copied: " + copyText.value);
+    }
+
+    document.getElementById('request-deposit-btn').addEventListener('click', () => {
+      const amount = document.getElementById('deposit-amount').value;
+
+      if (!amount || amount <= 0) {
+        alert('Please enter a valid deposit amount.');
+        return;
+      }
+
+      alert(`Deposit request submitted for $${amount}.\nPlease send this amount to one of the wallet addresses above.`);
+
+      // TODO: Add backend call here to register deposit request
+    });
+  </script>
+
+</body>
+</html>
+

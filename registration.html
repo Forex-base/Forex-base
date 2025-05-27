@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.7/css/all.css">
+</head>
+<body>
+  <div class="top2 container mt-5"> 
+    <div class="text-center mb-4">
+      <img class="register-image" src="images/forexbase.png" alt="Forexbase logo" />
+      <h1>Register to Forexbase</h1>
+    </div>
+
+    <div id="errorAlert" class="alert alert-danger d-none"></div>
+
+    <form class="registration-form" id="registrationForm">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullName" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" required autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" class="form-control" required autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="form-control" />
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="subscribe" name="subscribe" class="form-check-input" />
+        <label class="form-check-label" for="subscribe">Subscribe to newsletter</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+
+    <a href="index.html" class="btn btn-secondary btn-block mt-3">Back to Home</a>
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>
+
