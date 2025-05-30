@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.0.7/css/all.css">
+</head>
+<body>
+  <div class="top2"> 
+    <div class="text-center mb-4">
+      <img class="register-image" src="images/forexbase.png" alt="Forexbase logo" />
+      <h1>Register to Forexbase</h1>
+    </div>
+
+    <div id="errorAlert" class="alert alert-danger d-none"></div>
+
+    <form class="registration-form" id="registerForm">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullName" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" class="form-control" required />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-control" required autocomplete="off" />
+      </div>
+
+      <div class="form-group">
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" class="form-control" required autocomplete="off" />
+      </div>      
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" class="form-control" />
+      </div>
+
+      <div class="form-group form-check">
+        <input type="checkbox" id="subscribe" name="subscribe" class="form-check-input" />
+        <label class="form-check-label" for="subscribe">Subscribe to newsletter</label>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Register</button>
+    </form>
+
+    <P></P>
+
+     <a href="index.html">
+            <button type="button" class="btn btn-dark btn-lg"><i class="fa-solid fa-user-plus"></i>Home-page</button>
+          </a>
+      </div>
+  </div>
+
+  <script src="register.js"></script>
+  <!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/64bab31b94cf5d49dc653ff2/1h5sknbn6';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+</body>
+</html>
+
